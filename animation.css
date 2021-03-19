@@ -9,11 +9,12 @@ html {
 
 body {
     width: 100vw;
-    height: 100vw;
     overflow-x: hidden;
     background-color: #F6F7FC;
+    color: #F6F7FC;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 h1 {
@@ -22,13 +23,311 @@ h1 {
 
 ul {
     background-color: #242257;
-    width: 240px;
-    height: 100vh;
+    width: 260px;
+    min-height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
     padding: 1.25rem;
     margin: 0;
-    color: #F6F7FC;
     list-style: none;
 }
+
+li a {
+    padding: 13px 20px 13px 30px;
+    color: #F6F7FC;
+    display: flex;
+    align-items: center;
+    height: 46px;
+    text-decoration: none;
+    border-radius: .3rem;
+    transition: all .3s ease-in-out;
+    outline: none;
+}
+
+li a:hover {
+    background-color: #F6F7FC;
+    color: #242257;
+    transition: all .3s ease-in-out;
+}
+
+li span {
+    margin-left: .4rem;
+}
+
+/* Дашборд */
+
+#dashboard:hover svg path:nth-child(7),
+#dashboard:hover svg path:nth-child(8) {
+    stroke: #242257;
+}
+
+#dashboard svg path:nth-child(3) {
+    transform-origin: 90% 100%;
+}
+
+#dashboard:hover svg path:nth-child(1),
+#dashboard:hover svg path:nth-child(2),
+#dashboard:hover svg path:nth-child(4),
+#dashboard:hover svg path:nth-child(5) {
+    animation: 1s dashboard-circle;
+    animation-delay: 310ms;
+}
+
+#dashboard:hover svg path:nth-child(7) {
+    animation: 400ms dashboard-circle ease;
+    animation-delay: 200ms;
+}
+
+#dashboard:hover path:nth-child(8) {
+    animation: 400ms dashboard-rect ease;
+}
+
+#dashboard:hover path:nth-child(6) {
+    animation: 400ms dashboard-circle;
+    animation-delay: 500ms;
+}
+
+#dashboard:hover svg path:nth-child(3) {
+    animation: 300ms dashboard-rect ease;
+    animation-delay: 300ms;
+}
+
+#dashboard:hover path:nth-child(8) {
+    transform-origin: 10% 100%;
+}
+
+/* Расходы */
+#cost:hover path:nth-child(6) {
+    stroke: #242257;
+}
+
+#cost:hover path:nth-child(1),
+#cost:hover path:nth-child(2) {
+    fill: #242257;
+}
+
+#cost:hover path:nth-child(3) {
+    fill: #FEBA4D;
+    animation: .8s opacity-3;
+}
+
+#cost:hover path:nth-child(4) {
+    animation: 5s opacity-2;
+}
+
+#cost:hover path:nth-child(5) {
+    animation: 5s opacity-1;
+}
+
+#cost:hover path:nth-child(1),
+#cost:hover path:nth-child(6) {
+    transform-origin: left bottom;
+}
+
+#cost:hover path:nth-child(2) {
+    transform-origin: 50% 100%;
+}
+
+#cost:hover path:nth-child(1),
+#cost:hover path:nth-child(6) {
+    animation: .5s cost-width-1;
+}
+
+#cost:hover path:nth-child(2) {
+    animation: .5s cost-width-2;
+}
+
+/* Расходы */
+#projects:hover path:nth-child(1),
+#projects:hover path:nth-child(2) {
+    stroke: #242257;
+}
+
+#projects rect,
+#projects path:nth-child(4) {
+    transform-origin: 50% 50%;
+}
+
+#projects:hover rect,
+#projects:hover path:nth-child(4) {
+    animation: 600ms cost-width-1 ease;
+}
+
+#projects path:nth-child(5) {
+    transform-origin: 50% 50%;
+}
+
+#projects:hover path:nth-child(5) {
+    animation: 400ms project-opacity ease;
+}
+
+/* Задачи */
+#challenge:hover path:nth-child(1) {
+    stroke: #242257;
+}
+
+#challenge:hover path:nth-child(1) {
+    stroke: #242257;
+}
+
+#challenge path:nth-child(3) {
+    transform-origin: 5% 70%;
+}
+
+#challenge path:nth-child(4) {
+    transform-origin: 50% 50%;
+    transition: all .5s ease-in-out;
+}
+
+#challenge:hover path:nth-child(3) {
+    animation: 1.4s challenge-line ease;
+}
+
+#challenge:hover path:nth-child(4) {
+    animation: .8s challenge-pencil linear;
+}
+
+@keyframes challenge-pencil {
+    0% {
+        transform: rotate(0);
+    }
+    30% {
+        transform: rotate(0);
+    }
+    65% {
+        transform: rotate(-80deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes challenge-line {
+    0% {
+        opacity: 0;
+        transform: scale(1, 0) translate(0%, 50%);
+        stroke-width: 0.4;
+    }
+    25% {
+        opacity: 1;
+        stroke-width: .8;
+        transform: scale(1, 1);
+    }
+    40% {
+        opacity: 1;
+    }
+    55% {
+        opacity: .5;
+    }
+    70% {
+        opacity: 0;
+        stroke-width: .3;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0, 0);
+    }
+}
+
+@keyframes project-opacity {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(0, 0);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes cost-width-1 {
+    from {
+        transform: scale(0, 1);
+    }
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes cost-width-2 {
+    0% {
+        transform: scale(0, 1);
+    }
+    50% {
+        transform: scale(0, 1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes dashboard-circle {
+    0% {
+        stroke-width: .7;
+        opacity: 0;
+    }
+    50% {
+        opacity: .3;
+        stroke-width: .7;
+    }
+    100% {
+        stroke-width: 1.5;
+        opacity: 1;
+    }
+}
+
+@keyframes dashboard-rect {
+    0% {
+        transform-origin: 50% 100%;
+        transform: scale(0, 0);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes opacity-1 {
+    0% {
+        opacity: 0;
+    }
+    33% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes opacity-2 {
+    0% {
+        opacity: 0;
+    }
+    53% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes opacity-3 {
+    0% {
+        opacity: 0;
+    }
+    33% {
+        opacity: 0;
+    }
+    53% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
