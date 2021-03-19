@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    width: 100vw;
+    height: 100vw;
+    overflow-x: hidden;
+    background-color: #F6F7FC;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+ul {
+    background-color: #242257;
+    width: 240px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1.25rem;
+    margin: 0;
+    color: #F6F7FC;
+    list-style: none;
+}
