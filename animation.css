@@ -1,690 +1,1061 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }
 
 body {
-  width: 100vw;
-  overflow-x: hidden;
-  background-color: #f6f7fc;
-  color: #f6f7fc;
-  margin: 0;
-  padding: 0;
-  position: relative;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: #f6f7fc;
+    color: #f6f7fc;
+    margin: 0;
+    padding: 0;
+    position: relative;
 }
 
 h1 {
-  text-align: center;
+    text-align: center;
 }
 
 ul {
-  background-color: #242257;
-  width: 260px;
-  min-height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 1.25rem;
-  margin: 0;
-  list-style: none;
+    background-color: #242257;
+    width: 260px;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1.25rem;
+    margin: 0;
+    list-style: none;
 }
 
 li a {
-  padding: 13px 20px 13px 30px;
-  color: #f6f7fc;
-  display: flex;
-  align-items: center;
-  height: 46px;
-  text-decoration: none;
-  border-radius: 0.3rem;
-  transition: all 0.3s ease-in-out;
-  outline: none;
+    padding: 13px 20px 13px 30px;
+    color: #f6f7fc;
+    display: flex;
+    align-items: center;
+    height: 46px;
+    text-decoration: none;
+    border-radius: 0.3rem;
+    transition: all 0.3s ease-in-out;
+    outline: none;
 }
 
 li a:hover {
-  background-color: #f6f7fc;
-  color: #242257;
-  transition: all 0.3s ease-in-out;
+    background-color: #f6f7fc;
+    color: #242257;
+    transition: all 0.3s ease-in-out;
 }
 
 li span {
-  margin-left: 0.4rem;
+    margin-left: 0.4rem;
 }
 
 /* Дашборд */
 
 #dashboard:hover svg path:nth-child(7),
 #dashboard:hover svg path:nth-child(8) {
-  stroke: #242257;
+    stroke: #242257;
 }
 
 #dashboard svg path:nth-child(3) {
-  transform-origin: 90% 100%;
+    transform-origin: 90% 100%;
 }
 
 #dashboard:hover svg path:nth-child(1),
 #dashboard:hover svg path:nth-child(2),
 #dashboard:hover svg path:nth-child(4),
 #dashboard:hover svg path:nth-child(5) {
-  animation: 1s dashboard-circle;
-  animation-delay: 310ms;
+    animation: 1s dashboard-circle;
+    animation-delay: 310ms;
 }
 
 #dashboard:hover svg path:nth-child(7) {
-  animation: 400ms dashboard-circle ease;
-  animation-delay: 200ms;
+    animation: 400ms dashboard-circle ease;
+    animation-delay: 200ms;
 }
 
 #dashboard:hover path:nth-child(8) {
-  animation: 400ms dashboard-rect ease;
+    animation: 400ms dashboard-rect ease;
 }
 
 #dashboard:hover path:nth-child(6) {
-  animation: 400ms dashboard-circle;
-  animation-delay: 500ms;
+    animation: 400ms dashboard-circle;
+    animation-delay: 500ms;
 }
 
 #dashboard:hover svg path:nth-child(3) {
-  animation: 300ms dashboard-rect ease;
-  animation-delay: 300ms;
+    animation: 300ms dashboard-rect ease;
+    animation-delay: 300ms;
 }
 
 #dashboard:hover path:nth-child(8) {
-  transform-origin: 10% 100%;
+    transform-origin: 10% 100%;
 }
 
 /* Расходы */
 #cost:hover path:nth-child(6) {
-  stroke: #242257;
+    stroke: #242257;
 }
 
 #cost:hover path:nth-child(1),
 #cost:hover path:nth-child(2) {
-  fill: #242257;
+    fill: #242257;
 }
 
 #cost:hover path:nth-child(3) {
-  fill: #feba4d;
-  animation: 0.8s opacity-3;
+    fill: #feba4d;
+    animation: 0.8s opacity-3;
 }
 
 #cost:hover path:nth-child(4) {
-  animation: 5s opacity-2;
+    animation: 5s opacity-2;
 }
 
 #cost:hover path:nth-child(5) {
-  animation: 5s opacity-1;
+    animation: 5s opacity-1;
 }
 
 #cost:hover path:nth-child(1),
 #cost:hover path:nth-child(6) {
-  transform-origin: left bottom;
+    transform-origin: left bottom;
 }
 
 #cost:hover path:nth-child(2) {
-  transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
 }
 
 #cost:hover path:nth-child(1),
 #cost:hover path:nth-child(6) {
-  animation: 0.5s cost-width-1;
+    animation: 0.5s cost-width-1;
 }
 
 #cost:hover path:nth-child(2) {
-  animation: 0.5s cost-width-2;
+    animation: 0.5s cost-width-2;
 }
 
 /* Расходы */
 #projects:hover path:nth-child(1),
 #projects:hover path:nth-child(2) {
-  stroke: #242257;
+    stroke: #242257;
 }
 
 #projects rect,
 #projects path:nth-child(4) {
-  transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
 }
 
 #projects:hover rect,
 #projects:hover path:nth-child(4) {
-  animation: 600ms cost-width-1 ease;
+    animation: 600ms cost-width-1 ease;
 }
 
 #projects path:nth-child(5) {
-  transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
 }
 
 #projects:hover path:nth-child(5) {
-  animation: 400ms project-opacity ease;
+    animation: 400ms project-opacity ease;
 }
 
 /* Задачи */
 #challenge:hover path:nth-child(1) {
-  stroke: #242257;
+    stroke: #242257;
 }
 
 #challenge:hover path:nth-child(1) {
-  stroke: #242257;
+    stroke: #242257;
 }
 
 #challenge path:nth-child(3) {
-  transform-origin: 5% 70%;
+    transform-origin: 5% 70%;
 }
 
 #challenge path:nth-child(4) {
-  transform-origin: 50% 50%;
-  transition: all 0.5s ease-in-out;
+    transform-origin: 50% 50%;
+    transition: all 0.5s ease-in-out;
 }
 
 #challenge:hover path:nth-child(3) {
-  animation: 1.4s challenge-line ease;
+    animation: 1.4s challenge-line ease;
 }
 
 #challenge:hover path:nth-child(4) {
-  animation: 0.8s challenge-pencil linear;
+    animation: 0.8s challenge-pencil linear;
 }
 
 /* Заказ */
 #order-creative path:nth-child(4) {
-  transform-origin: 50% 50%;
-  transition: all 0.5s ease-in-out;
+    transform-origin: 50% 50%;
+    transition: all 0.5s ease-in-out;
 }
 
 #order-creative:hover path:nth-child(4) {
-  stroke: #242257;
+    stroke: #242257;
 }
 
 #order-creative:hover svg {
-  animation: 0.8s challenge-pencil linear;
+    animation: 0.8s challenge-pencil linear;
 }
 
 #order-creative:hover circle:nth-child(5) {
-  animation: 0.8s order-circle linear;
+    animation: 0.8s order-circle linear;
 }
 
 #order-creative:hover ellipse:nth-child(6),
 #order-creative:hover ellipse:nth-child(7),
 #order-creative:hover ellipse:nth-child(8) {
-  animation: 0.8s order-ellipse linear;
+    animation: 0.8s order-ellipse linear;
 }
 
 /* Заказ БМов */
 #order-bm:hover svg {
-  animation: 400ms order-bm-rotate linear;
+    animation: 400ms order-bm-rotate linear;
 }
 
 #order-bm:hover path:nth-child(1) {
-  fill: #242257;
-  transition: fill 0.3s ease-in-out;
-  animation: 800ms order-bm-pathone linear;
+    fill: #242257;
+    transition: fill 0.3s ease-in-out;
+    animation: 800ms order-bm-pathone linear;
 }
 
 #order-bm:hover path:nth-child(2) {
-  fill: #fee57b;
-  transition: fill 0.3s ease-in-out;
-  animation: 800ms order-bm-pathtwo linear;
+    fill: #fee57b;
+    transition: fill 0.3s ease-in-out;
+    animation: 800ms order-bm-pathtwo linear;
 }
 
 #order-bm:hover path:nth-child(3) {
-  fill: #006ebe;
-  animation: 800ms order-bm-paththree linear;
+    fill: #006ebe;
+    animation: 800ms order-bm-paththree linear;
 }
 
 /* База знаний */
 #knowledge-base:hover path:nth-child(1) {
-  stroke: #242257;
-  stroke-dasharray: 25;
-  stroke-dashoffset: 25;
-  animation: 2s dash linear forwards;
+    stroke: #242257;
+    stroke-dasharray: 25;
+    stroke-dashoffset: 25;
+    animation: 1s dash linear forwards;
 }
 
 #knowledge-base:hover path:nth-child(2) {
-  stroke-dasharray: 50;
-  stroke-dashoffset: 50;
-  animation: 2s dash linear forwards;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: 1s dash linear forwards;
 }
 
 #knowledge-base:hover path:nth-child(3) {
-  stroke: #feba4d;
-  stroke-dasharray: 25;
-  stroke-dashoffset: 25;
-  animation: 2s dash linear forwards;
+    stroke: #feba4d;
+    stroke-dasharray: 25;
+    stroke-dashoffset: 25;
+    animation: 1s dash linear forwards;
 }
 
 #knowledge-base:hover rect:nth-child(4) {
-  fill: #feba4d;
-  animation: 1.3s knowledge-base-circle linear;
+    fill: #feba4d;
+    animation: .3s knowledge-base-circle linear;
 }
 
 /* Зарплата */
 #salary:hover rect:nth-child(1) {
-  stroke: #242257;
-  stroke-dasharray: 50;
-  stroke-dashoffset: 50;
-  animation: 0.5s dash-forwards linear forwards;
+    stroke: #242257;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: 0.5s dash-forwards linear forwards;
 }
 
 #salary:hover rect:nth-child(2) {
-  fill: #242257;
+    fill: #242257;
+    transform-origin: 50% 50%;
+    animation: 0.8s salary-rect-corner-lefttop linear;
 }
 
 #salary:hover rect:nth-child(3) {
-  fill: #242257;
+    fill: #242257;
+    transform-origin: 50% 50%;
+    animation: 0.8s salary-rect-corner-leftbottom linear;
 }
 
 #salary:hover rect:nth-child(5) {
-  fill: #242257;
-  animation: 0.8s salary-rect-corner-righttop linear;
+    fill: #242257;
+    transform-origin: 20% 20%;
+    animation: 850ms salary-rect-corner-righttop linear;
 }
 
 #salary:hover rect:nth-child(6) {
-  fill: #242257;
-  animation: 0.8s salary-rect-corner-rightbottom linear;
+    fill: #242257;
+    transform-origin: 50% 50%;
+    animation: 0.8s salary-rect-corner-rightbottom linear;
 }
 
 #salary:hover path:nth-child(8) {
-  transform-origin: 50% 60%;
-  animation: 0.8s salary-rectcenter linear;
+    transform-origin: 50% 60%;
+    animation: 0.8s salary-rectcenter linear;
 }
 
 #salary:hover rect:nth-child(4) {
-  transform-origin: 50% 60%;
-  fill: #feba4d;
-  animation: 0.8s salary-rectside-left linear;
+    transform-origin: 50% 60%;
+    fill: #feba4d;
+    animation: 0.8s salary-rectside-left linear;
 }
 
 #salary:hover rect:nth-child(7) {
-  transform-origin: 50% 60%;
-  fill: #feba4d;
-  animation: 0.8s salary-rectside-rigth linear;
+    transform-origin: 50% 60%;
+    fill: #feba4d;
+    animation: 0.8s salary-rectside-rigth linear;
+}
+
+#salary:hover path:nth-child(9),
+#salary:hover path:nth-child(10),
+#salary:hover path:nth-child(11) {
+    fill: #feba4d;
+    transform-origin: 50% 50%;
+    animation: .8s salary-arrow linear;
+}
+
+/* Карты */
+#carts svg {
+    -webkit-perspective: 500px;
+    perspective: 500px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+#carts:hover rect:nth-child(1) {
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    stroke: #242257;
+    transform-origin: 50% 50%;
+    animation: 1s carts-firstcart linear forwards;
+}
+
+#carts:hover rect:nth-child(2),
+#carts:hover rect:nth-child(3) {
+    fill: #FEBA4D;
+    transform-origin: 0 -40%;
+    animation: 1s carts-innercart linear;
+}
+
+#carts:hover path:nth-child(4) {
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: .6s carts-secondcart linear forwards;
+}
+
+/* Информация */
+#information:hover path:nth-child(1) {
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    stroke: #242257;
+    animation: .6s dash linear forwards;
+}
+
+#information:hover path:nth-child(2),
+#information:hover path:nth-child(3) {
+    animation: .8s information-attention linear;
+}
+
+#information:hover path:nth-child(3) {
+    fill: #FEBA4D;
+}
+
+#information:hover svg {
+    transform-origin: 50% 50%;
+    animation: 1s information-svg linear;
+}
+
+/* Сервисы и прокси */
+#services:hover circle:nth-child(1),
+#services:hover path:nth-child(2) {
+    stroke: #57CDFF;
+}
+
+#services:hover rect:nth-child(3),
+#services:hover rect:nth-child(4) {
+    fill: #57CDFF;
+}
+
+#services:hover rect:nth-child(5) {
+    transform-origin: 0 0;
+    animation: .3s services-line linear;
+}
+
+#services:hover circle:nth-child(1),
+#services:hover path:nth-child(2),
+#services:hover rect:nth-child(3),
+#services:hover rect:nth-child(4),
+#services:hover rect:nth-child(6) {
+    transform-origin: bottom center;
+    animation: .5s services-globe linear;
+}
+
+/* Таски */
+#tasks:hover path:nth-child(1) {
+    fill: #FEBA4D;
+    animation: .5s information-attention linear;
+}
+
+#tasks:hover path:nth-child(3) {
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    stroke: #242257;
+    animation: .5s dash linear forwards;
+}
+
+#tasks:hover path:nth-child(2) {
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: .5s carts-secondcart linear forwards;
+}
+
+/* Утилиты */
+#utility:hover rect:nth-child(3) {
+    stroke: #242257;
+    transform-origin: 50% 100%;
+    animation: .5s utility-recttall linear;
+}
+
+#utility:hover rect:nth-child(1) {
+    transform-origin: 50% 0;
+    animation: .5s utility-rectsmall linear;
+}
+
+#utility:hover rect:nth-child(2) {
+    transform-origin: 50% 100%;
+    animation: .6s utility-rectsmall linear;
+}
+
+#utility:hover rect:nth-child(4) {
+    transform-origin: 50% 0;
+    animation: .7s utility-recttall linear;
+}
+
+/* Клиенты */
+#clients:hover path:nth-child(1),
+#clients:hover path:nth-child(2),
+#clients:hover path:nth-child(3),
+#clients:hover path:nth-child(4) {
+    fill: #242257;
+}
+
+#clients:hover circle:nth-child(5) {
+    transform-origin: 50% 10%;
+    animation: .5s clients-circle linear;
+}
+
+#clients:hover path:nth-child(6) {
+    transform-origin: 50% 90%;
+    animation: .5s clients-rect linear;
+}
+
+/* Настройки */
+#settings:hover path:nth-child(2),
+#settings:hover path:nth-child(3),
+#settings:hover path:nth-child(4) {
+    fill: #242257;
+}
+
+#settings:hover path:nth-child(1) {
+    stroke: #242257;
+    transform-origin: 70% 70%;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: 1.5s settings-gear linear forwards;
+}
+
+@keyframes settings-gear {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        stroke-dashoffset: 0;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes clients-rect {
+    0% {
+        transform: scale(1.3, 1.3);
+    }
+    50% {
+        transform: scale(.5, .5);
+    }
+    80% {
+        transform: scale(1.1, 1.1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+
+@keyframes clients-circle {
+    0% {
+        transform: scale(0, 0);
+    }
+    50% {
+        transform: scale(1.3, 1.3);
+    }
+    80% {
+        transform: scale(.8, .8);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes utility-rectsmall {
+    0% {
+        transform: scale(1, 1.3);
+    }
+    70% {
+        transform: scale(1, .7);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes utility-recttall {
+    0% {
+        transform: scale(1, 0.7);
+    }
+    70% {
+        transform: scale(1, 1.3);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes services-globe {
+    0% {
+        transform: scale(0, 0);
+    }
+    70% {
+        transform: scale(0, 0);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes services-line {
+    0% {
+        transform: scale(0, 1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes information-svg {
+    0% {
+        transform: scale(1, 1);
+    }
+    60% {
+        transform: scale(1, 1);
+    }
+    80% {
+        transform: scale(1.2, 1.2);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes information-attention {
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes information-attention {
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes carts-secondcart {
+    0% {
+        fill: none;
+        stroke: #57CDFF;
+        stroke-width: 1.5;
+        stroke-dashoffset: 50;
+    }
+    65% {
+        fill: none;
+        stroke: #57CDFF;
+        stroke-width: 1.5;
+        stroke-dashoffset: 50;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes carts-innercart {
+    0% {
+        fill: none;
+    }
+    69% {
+        transform: scale(0, 1);
+        fill: none;
+    }
+    70% {
+        transform: scale(0, 1);
+        fill: #FEBA4D;
+    }
+    90% {
+        transform: scale(1, 1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes carts-firstcart {
+    0% {
+        fill: #242257;
+        -webkit-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+    15% {
+        stroke-dashoffset: 50;
+        -webkit-transform: rotateY(90deg);
+        -ms-transform: rotateY(90deg);
+        transform: rotateY(180deg);
+    }
+    30% {
+        -webkit-transform: rotateY(0);
+        -ms-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes salary-arrow {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(0, 0);
+    }
+    100% {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+}
+
+@keyframes salary-rect-corner-lefttop {
+    0% {
+        transform: translate(-4%, 4%);
+        fill: none;
+        opacity: 0;
+    }
+    98% {
+        transform: translate(-4%, 4%);
+        opacity: 0;
+    }
+    100% {
+        fill: #242257;
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes salary-rect-corner-leftbottom {
+    0% {
+        transform: translate(4%, -4%);
+        fill: none;
+        opacity: 0;
+    }
+    98% {
+        transform: translate(4%, -4%);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        fill: #242257;
+        transform: translate(0, 0);
+    }
 }
 
 @keyframes salary-rect-corner-righttop {
-  0% {
-    transform: translate(5%, 5%);
-    fill: none;
-    opacity: 0;
-  }
-  50% {
-    transform: translate(5%, 5%);
-  }
-  70% {
-    transform: translate(5%, 5%);
-    fill: none;
-    opacity: 0;
-  }
-  100% {
-    fill: #242257;
-    transform: translate(0, 0);
-    opacity: 1;
-  }
+    0% {
+        transform: translate(4%, 4%);
+        fill: none;
+        opacity: 0;
+    }
+    98% {
+        transform: translate(2%, 2%);
+        opacity: 0;
+    }
+    100% {
+        fill: #242257;
+        transform: translate(0, 0);
+        opacity: 1;
+    }
 }
 
 @keyframes salary-rect-corner-rightbottom {
-  0% {
-    transform: translate(-5%, -5%);
-    fill: none;
-    opacity: 0;
-  }
-  50% {
-    transform: translate(-5%, -5%);
-    fill: none;
-    opacity: 0;
-  }
-  70% {
-    fill: none;
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    fill: #242257;
-    transform: translate(0, 0);
-  }
-}
-
-@keyframes salary-rect-corner-righttop {
-  0% {
-    transform: translate(-20%, 20%);
-    fill: none;
-  }
-  30% {
-    transform: translate(-20%, 20%);
-    fill: none;
-  }
-  50% {
-    fill: #242257;
-  }
-  100% {
-    fill: #242257;
-    transform: translate(0, 0);
-  }
+    0% {
+        transform: translate(-4%, -4%);
+        fill: none;
+        opacity: 0;
+    }
+    98% {
+        transform: translate(-4%, -4%);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        fill: #242257;
+        transform: translate(0, 0);
+    }
 }
 
 @keyframes salary-rectside-rigth {
-  0% {
-    transform: translate(-20%, 0);
-    fill: none;
-  }
-  30% {
-    transform: translate(-20%, 0);
-    fill: none;
-  }
-  50% {
-    fill: #feba4d;
-  }
-  100% {
-    fill: #feba4d;
-    transform: translate(0, 0);
-  }
+    0% {
+        transform: translate(-20%, 0);
+        fill: none;
+    }
+    30% {
+        transform: translate(-20%, 0);
+        fill: none;
+    }
+    50% {
+        fill: #feba4d;
+    }
+    100% {
+        fill: #feba4d;
+        transform: translate(0, 0);
+    }
 }
 
 @keyframes salary-rectside-left {
-  0% {
-    transform: translate(20%, 0);
-    fill: none;
-  }
-  30% {
-    transform: translate(20%, 0);
-    fill: none;
-  }
-  50% {
-    fill: #feba4d;
-  }
-  100% {
-    fill: #feba4d;
-    transform: translate(0, 0);
-  }
+    0% {
+        transform: translate(20%, 0);
+        fill: none;
+    }
+    30% {
+        transform: translate(20%, 0);
+        fill: none;
+    }
+    50% {
+        fill: #feba4d;
+    }
+    100% {
+        fill: #feba4d;
+        transform: translate(0, 0);
+    }
 }
 
 @keyframes salary-rectcenter {
-  0% {
-    transform: scale(0.5, 0.5);
-    stroke-width: 0;
-    stroke: none;
-    fill: none;
-  }
-  30% {
-    transform: scale(0.5, 0.5);
-    fill: #feba4d;
-    stroke-width: 0;
-    stroke: none;
-  }
-  50% {
-    fill: #feba4d;
-    stroke: #feba4d;
-  }
-  100% {
-    fill: none;
-    transform: scale(1, 1);
-    stroke-width: 1.5;
-    stroke: #57cdff;
-  }
+    0% {
+        transform: scale(0.5, 0.5);
+        stroke-width: 0;
+        stroke: none;
+        fill: none;
+    }
+    30% {
+        transform: scale(0.5, 0.5);
+        fill: #feba4d;
+        stroke-width: 0;
+        stroke: none;
+    }
+    50% {
+        fill: #feba4d;
+        stroke: #feba4d;
+    }
+    100% {
+        fill: none;
+        transform: scale(1, 1);
+        stroke-width: 1.5;
+        stroke: #57cdff;
+    }
 }
 
 @keyframes dash-forwards {
-  to {
-    stroke-dashoffset: 100;
-  }
+    to {
+        stroke-dashoffset: 100;
+    }
 }
 
 @keyframes knowledge-base-circle {
-  0% {
-    fill: none;
-  }
-  90% {
-    fill: none;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
+    0% {
+        fill: none;
+    }
+    90% {
+        fill: none;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
 }
 
 @keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
+    to {
+        stroke-dashoffset: 0;
+    }
 }
 
 @keyframes order-bm-paththree {
-  0% {
-    fill: #fee57b;
-  }
-  20% {
-    fill: #fee57b;
-  }
-  70% {
-    fill: #fee57b;
-  }
-  80% {
-    fill: #006ebe;
-  }
-  100% {
-    fill: #006ebe;
-  }
+    0% {
+        fill: #fee57b;
+    }
+    20% {
+        fill: #fee57b;
+    }
+    70% {
+        fill: #fee57b;
+    }
+    80% {
+        fill: #006ebe;
+    }
+    100% {
+        fill: #006ebe;
+    }
 }
 
 @keyframes order-bm-pathtwo {
-  0% {
-    fill: #242257;
-  }
-  20% {
-    fill: #242257;
-  }
-  30% {
-    fill: #fee57b;
-  }
-  70% {
-    fill: #fee57b;
-  }
-  90% {
-    fill: #006ebe;
-  }
-  100% {
-    fill: #fee57b;
-  }
+    0% {
+        fill: #242257;
+    }
+    20% {
+        fill: #242257;
+    }
+    30% {
+        fill: #fee57b;
+    }
+    70% {
+        fill: #fee57b;
+    }
+    90% {
+        fill: #006ebe;
+    }
+    100% {
+        fill: #fee57b;
+    }
 }
 
 @keyframes order-bm-pathone {
-  0% {
-    fill: #242257;
-    stroke: #242257;
-  }
-  20% {
-    fill: #242257;
-    stroke: #242257;
-  }
-  30% {
-    fill: #fee57b;
-    stroke: #242257;
-  }
-  90% {
-    fill: #fee57b;
-    stroke: #242257;
-  }
-  100% {
-    fill: #242257;
-  }
+    0% {
+        fill: #242257;
+        stroke: #242257;
+    }
+    20% {
+        fill: #242257;
+        stroke: #242257;
+    }
+    30% {
+        fill: #fee57b;
+        stroke: #242257;
+    }
+    90% {
+        fill: #fee57b;
+        stroke: #242257;
+    }
+    100% {
+        fill: #242257;
+    }
 }
 
 @keyframes order-bm-rotate {
-  to {
-    transform: rotate(73deg);
-  }
+    to {
+        transform: rotate(73deg);
+    }
 }
 
 @keyframes order-ellipse {
-  0% {
-    fill: none;
-  }
-  65% {
-    fill: none;
-  }
-  90% {
-    fill: #feba4d;
-  }
-  100% {
-    fill: none;
-  }
+    0% {
+        fill: none;
+    }
+    65% {
+        fill: none;
+    }
+    90% {
+        fill: #feba4d;
+    }
+    100% {
+        fill: none;
+    }
 }
 
 @keyframes order-circle {
-  0% {
-    fill: none;
-  }
-  30% {
-    fill: none;
-  }
-  65% {
-    fill: #feba4d;
-  }
-  100% {
-    opacity: 0.5;
-    fill: none;
-  }
+    0% {
+        fill: none;
+    }
+    30% {
+        fill: none;
+    }
+    65% {
+        fill: #feba4d;
+    }
+    100% {
+        opacity: 0.5;
+        fill: none;
+    }
 }
 
 @keyframes challenge-pencil {
-  0% {
-    transform: rotate(0);
-  }
-  30% {
-    transform: rotate(0);
-  }
-  65% {
-    transform: rotate(-80deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
+    0% {
+        transform: rotate(0);
+    }
+    30% {
+        transform: rotate(0);
+    }
+    65% {
+        transform: rotate(-80deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
 }
 
 @keyframes challenge-line {
-  0% {
-    opacity: 0;
-    transform: scale(1, 0) translate(0%, 50%);
-    stroke-width: 0.4;
-  }
-  25% {
-    opacity: 1;
-    stroke-width: 0.8;
-    transform: scale(1, 1);
-  }
-  40% {
-    opacity: 1;
-  }
-  55% {
-    opacity: 0.5;
-  }
-  70% {
-    opacity: 0;
-    stroke-width: 0.3;
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0, 0);
-  }
+    0% {
+        opacity: 0;
+        transform: scale(1, 0) translate(0%, 50%);
+        stroke-width: 0.4;
+    }
+    25% {
+        opacity: 1;
+        stroke-width: 0.8;
+        transform: scale(1, 1);
+    }
+    40% {
+        opacity: 1;
+    }
+    55% {
+        opacity: 0.5;
+    }
+    70% {
+        opacity: 0;
+        stroke-width: 0.3;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0, 0);
+    }
 }
 
 @keyframes project-opacity {
-  0% {
-    transform: scale(0, 0);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(0, 0);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1, 1);
-  }
+    0% {
+        transform: scale(0, 0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(0, 0);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
 }
 
 @keyframes cost-width-1 {
-  from {
-    transform: scale(0, 1);
-  }
-  to {
-    transform: scale(1, 1);
-  }
+    from {
+        transform: scale(0, 1);
+    }
+    to {
+        transform: scale(1, 1);
+    }
 }
 
 @keyframes cost-width-2 {
-  0% {
-    transform: scale(0, 1);
-  }
-  50% {
-    transform: scale(0, 1);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
+    0% {
+        transform: scale(0, 1);
+    }
+    50% {
+        transform: scale(0, 1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
 }
 
 @keyframes dashboard-circle {
-  0% {
-    stroke-width: 0.7;
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.3;
-    stroke-width: 0.7;
-  }
-  100% {
-    stroke-width: 1.5;
-    opacity: 1;
-  }
+    0% {
+        stroke-width: 0.7;
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.3;
+        stroke-width: 0.7;
+    }
+    100% {
+        stroke-width: 1.5;
+        opacity: 1;
+    }
 }
 
 @keyframes dashboard-rect {
-  0% {
-    transform-origin: 50% 100%;
-    transform: scale(0, 0);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
+    0% {
+        transform-origin: 50% 100%;
+        transform: scale(0, 0);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
 }
 
 @keyframes opacity-1 {
-  0% {
-    opacity: 0;
-  }
-  33% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    33% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes opacity-2 {
-  0% {
-    opacity: 0;
-  }
-  53% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    53% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes opacity-3 {
-  0% {
-    opacity: 0;
-  }
-  33% {
-    opacity: 0;
-  }
-  53% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    33% {
+        opacity: 0;
+    }
+    53% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
